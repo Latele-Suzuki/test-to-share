@@ -1,0 +1,39 @@
+@use "../../global" as g;
+// -----------------------------------------
+// text-align 関係
+// -----------------------------------------
+#top {
+  .t-right,
+  .txtR,
+  .sign {
+    text-align: right;
+  }
+
+  .centerText,
+  .t-center,
+  .imgC,
+  .txtC {
+    text-align: center;
+  }
+
+  .t-left,
+  .txtL {
+    text-align: left;
+  }
+
+  .v-middle {
+    vertical-align: middle;
+  }
+
+  @include g.media(sp) {
+    .sp-t-left {
+      text-align: left;
+    }
+  }
+
+}
+
+
+.uppercase {
+  text-transform: uppercase;
+}

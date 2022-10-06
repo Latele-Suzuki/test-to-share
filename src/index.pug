@@ -1,0 +1,35 @@
+extend /_partial/_layout
+append variables
+  //- meta
+  - var pageTitle= "シェア機能";
+  - var pageDescription= "このページは、各種シェア機能に関する実験をするために用意したページです。";
+  - var pageURL= "/";
+  //- OGP
+  - var pageOgpTitle= "";
+  - var pageOgpImage= "";
+  - var pageOgpDescription= "";
+  //- body要素に付与するclass名
+  - var bodyClass="page-top";
+block head
+
+block content
+  main#main
+    h1.title.-style01 シェア機能まわりの実験用ページ
+    p このページは、各種シェア機能に関する実験をするために用意したページです。
+
+    section.mt50
+      h2.title.-style02 各種リンク
+      ul.shareLink
+        li.shareLink__item
+          a.share--fb(href="" target="_blank") Facebookでシェア
+        li.shareLink__item
+          a.share--tw(href="" target="_blank") Twitterでシェア
+        li.shareLink__item
+          a.share--line(href="" target="_blank") LINEでシェア
+
+      p.mt50
+        small ※このページの og:title / description / image の各値は動的に書き換えられています。
+
+
+
+block footer-script

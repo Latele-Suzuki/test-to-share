@@ -1,0 +1,25 @@
+@use "../global" as g;
+// ----------------------------------------------------
+//  ヘッダー
+// ----------------------------------------------------
+.header {
+  line-height: 1.2;
+  background: #007acc;
+  &__inner {
+    max-width: g.$width-main;
+    margin: 0 auto;
+    padding: 25px 0 15px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+// ロゴ
+.logo {
+  margin-bottom: 15px;
+  &__item {
+    margin: 0;
+  }
+}

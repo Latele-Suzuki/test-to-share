@@ -1,0 +1,25 @@
+block variables
+include _mixin
+doctype html
+html(lang="ja" dir="ltr")
+  head
+    include _meta
+    block head
+
+  body(class=bodyClass id=bodyID)
+    #page
+      // header START
+      header.header
+        .header__inner
+      // header END
+      |
+      |
+      // contens START
+      .contents#contents
+        block content
+      // contents END
+      |
+      |
+      // footer START
+      block footer
+    block footer-script

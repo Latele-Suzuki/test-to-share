@@ -1,0 +1,27 @@
+@use "../../global" as g;
+// -----------------------------------------
+// img float
+// -----------------------------------------
+
+.photo {
+  text-align: center;
+}
+
+.imgC {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.imgL,
+.ph_l {
+  margin: 0 20px 20px 0;
+  padding: 0;
+  float: left;
+}
+
+.imgR,
+.ph_r {
+  margin: 0 0 20px 20px;
+  padding: 0;
+  float: right;
+}

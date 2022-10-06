@@ -1,0 +1,84 @@
+// ===================================================================
+// 変数色々
+// width, font, z-index, breakpoints, color
+// ===================================================================
+
+// -----------------------------------------
+// 幅関係の設定
+// -----------------------------------------
+// 全体
+$width-base: 1024px;
+
+// 最大幅
+$width-max: 1280px;
+
+// 最小幅
+$width-min: 0;
+
+// メインエリアの幅
+$width-main: 1024px;
+
+// サイドバーの幅
+$width-side: 240px;
+
+
+
+// -----------------------------------------
+// フォント関係の設定
+// -----------------------------------------
+// ベースフォント
+$font-base: sans-serif;
+
+// 明朝
+$font-mincho: serif;
+
+// Webfont
+$font-web: 'Noto Sans Japanese', $font-base;
+
+// フォントサイズ
+$font-size: 1.8rem;
+$font-weight: 500;
+
+
+// -----------------------------------------
+// z-index 管理
+// -----------------------------------------
+$layer: (
+  default : 1
+);
+
+
+// -----------------------------------------
+// ブレイクポイントの設定
+// -----------------------------------------
+$breakpoints: (
+  pc:        "screen and (min-width: 769px)",
+  tablet-l:  "screen and (max-width: 1260px)",
+  tablet:    "screen and (max-width: 1024px)",
+  tablet-s:  "screen and (max-width: 940px)",
+  sp:        "screen and (max-width: 768px)",
+  sp-m:      "screen and (max-width: 600px)",
+  sp-s:      "screen and (max-width: 460px)",
+  w320:      "screen and (max-width: 340px)",
+) !default;
+
+
+
+// -----------------------------------------
+// 色関係の設定
+// -----------------------------------------
+// サイトカラー
+$color-body: white;
+$color-base: white;
+$color-main: #0081a3;
+$color-sub: #d62a2a;
+
+// フォントカラー
+$color-font: #333;
+
+// リンクカラー
+$color-link: #0083b4;
+$color-link_visited: #4555C7;
+$color-link_hover: #004B7F;
+$color-link_active: #4555C7;
+

@@ -1,0 +1,71 @@
+include _variables
+
+meta(charset="UTF-8")
+
+unless pageTitle
+  title #{siteName} #{siteNameCatch}
+else if parentTitle
+  title #{pageTitle} | #{parentTitle} | #{siteName}
+else
+  title #{pageTitle} | #{siteName}
+
+if pageDescription
+  meta(name="description" content=pageDescription)
+else
+  meta(name="description" content=baseDescription)
+
+if inc=='ssi'
+  <!--#include virtual="#{path_inc}share_head#{ext_inc}" -->
+else if inc=='php'
+  <?php $webroot = $_SERVER['DOCUMENT_ROOT']; include($webroot."#{path_inc}share_head#{ext_inc}"); ?>
+else
+  //- meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, viewport-fit=cover")
+  meta(name="format-detection" content="telephone=no")
+
+  link(rel="icon" href=path_favicon)
+
+link(rel="stylesheet" href=path_css + "s.css")
+block css
+
+script(src=path_js + "main.js" defer)
+
+//- OGP
+if pageOgpTitle
+  meta(property="og:title" content=pageOgpTitle)
+else if pageTitle
+  meta(property="og:title" content=pageTitle)
+else
+  meta(property="og:title" content=siteName)
+
+if pageTitle
+  meta(property="og:type" content="article")
+else
+  meta(property="og:type" content="website")
+
+if pageOgpImage
+  meta(property="og:image" content=pageOgpImage)
+else
+  meta(property="og:image" content=ogpImage)
+
+meta(property="og:url" content=rootURL + pageURL)
+
+if pageOgpDescription
+  meta(property="og:description" content=pageOgpDescription)
+else if pageDescription
+  meta(property="og:description" content=pageDescription)
+else
+  meta(property="og:description" content=baseDescription)
+meta(property="og:site_name" content=siteName)
+
+//- OGP Facebook insights
+if fbAdmins
+  meta(property="fb:admins" content=fbAdmins)
+
+if fbAppID
+  meta(property="fb:app_id" content=fbAppID)
+
+//- OGP Twitter Cards
+if twitterUserID
+  meta(name="twitter:card" content=twitterSummary)
+  meta(name="twitter:site" content=twitterUserID)
