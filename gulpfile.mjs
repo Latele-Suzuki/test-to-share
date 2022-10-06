@@ -49,27 +49,27 @@ const config = {
 
 const paths = {
   src: 'src', // 開発用
-  dist: '_site', // 書き出し用
+  dist: 'docs', // 書き出し用
   style: {
     src: 'src/assets/sass',
-    dist: '_site/assets/css'
+    dist: 'docs/assets/css'
   },
   js: {
     src: 'src/assets/js',
-    dist: '_site/assets/js'
+    dist: 'docs/assets/js'
   },
   inc: {
     src: 'src/assets/inc',
-    dist: '_site/assets/inc',
+    dist: 'docs/assets/inc',
     ext: '.html'
   },
   img: {
     src: 'src/assets/img',
-    dist: '_site/assets/img'
+    dist: 'docs/assets/img'
   },
   pdf: {
     src: 'src/assets/pdf',
-    dist: '_site/assets/pdf'
+    dist: 'docs/assets/pdf'
   },
 }
 
